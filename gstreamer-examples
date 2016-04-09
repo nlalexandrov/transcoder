@@ -1,0 +1,9 @@
+send rtp
+gst-launch -m filesrc location=test.wav ! wavparse ! audioconvert ! audioresample ! alawenc ! rtppcmapay ! udpsink port=1234 host=192.168.0.103
+
+receive rtp
+gst-launch -v udpsrc port=1234 ! fakesink
+
+
+just forward rtp, no transcoding :
+gst-launch -v udpsrc port=1234 ! udpsink port=7078 host=10.0.100.99

@@ -1,0 +1,7 @@
+/home/pipin/Development/ffmpeg-git-20160331-64bit-static/ffmpeg -re -i input.mpg -vcodec copy -an -f rtp rtp://224.10.20.30:20000 -vn -acodec copy -f rtp rtp://224.10.20.30:30000
+
+
+/home/pipin/Development/ffmpeg-git-20160331-64bit-static/ffmpeg -probesize 256 -analyzeduration 10 -re -c pcm_alaw -i rtp://10.0.100.99:1234 -vn -acodec copy -f rtp rtp://10.0.100.99:7078
+
+/home/pipin/Development/ffmpeg-git-20160331-64bit-static/ffmpeg -re -c pcm_alaw -i rtp://10.0.100.99:1234 -vn -acodec copy -f rtp rtp://10.0.100.99:7078
+

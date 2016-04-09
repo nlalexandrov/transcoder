@@ -1,0 +1,1 @@
+/usr/sbin/asterisk -C /home/pipin/Development/transcoder/asterisk-conf/asterisk.conf
