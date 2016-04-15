@@ -1,0 +1,20 @@
+It is generaly a good idea to plan your installation. As a frined on mine says "If you fail to plan ... you plan to fail!"
+
+Kamailio parameters 
+	Signaling IP address and port where kamailio will bind :
+		ISTEN_ADDRESS : 127.0.0.1
+		LISTEN_PORT : 5070
+
+	Transcoding port resources :
+		POOLS_START - the first port of the transcoding RTP pool range
+		POOL_SIZE - the size (in number of ports) that each worker thread will use
+		NUMBER_OF_WORKERS - how many worker threads we want
+
+
+
+Install Kamailio
+
+copy config file and restart kamailio
+think about security !!!
+
+Install gstreamer
