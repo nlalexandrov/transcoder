@@ -7,3 +7,9 @@ gst-launch -v udpsrc port=1234 ! fakesink
 
 just forward rtp, no transcoding :
 gst-launch -v udpsrc port=1234 ! udpsink port=7078 host=10.0.100.99
+
+alaw to ulaw:
+gst-launch -v udpsrc port=1234 ! rtppcmadepay ! alawdec ! mulawenc ! rtppcmupay ! udpsink port=7078 host=10.0.100.99
+
+alaw to g722
+gst-launch -v udpsrc port=1234 ! rtppcmadepay ! alawdec ! ffenc_g722 ! rtpg722pay ! udpsink port=7078 host=10.0.100.99
